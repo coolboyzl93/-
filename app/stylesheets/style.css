@@ -1,0 +1,44 @@
+.message-list {
+  position: relative;
+  border-radius: 15px;
+  padding: 0;
+  list-style: none;
+  background: rgba(199, 247, 151,0.5);
+}
+
+.message-row {
+  display: flex;
+  padding: 15px;
+  color: #666666;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.me {
+  padding: 15px;
+  color: black;
+  flex-direction: row;
+  text-align: left;
+}
+
+.message-username {
+  padding: 0 10px 0 10px;
+  font-weight: bolder;
+}
+.timestamp {
+  padding-right: 10px;
+  font-family: serif; 
+  font-style: italic;
+}
+
+.message-message {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.message-row img {
+  border-radius: 0 10px 10px 0;
+}
+.me img {
+  border-radius: 10px 0 0 10px;
+}

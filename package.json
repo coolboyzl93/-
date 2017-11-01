@@ -1,0 +1,43 @@
+{
+  "name": "Chattrbox",
+  "version": "1.0.0",
+  "description": "full stack chat app",
+  "main": "index.js",
+  "author": "e <rayzhang047@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "browserify -d app/scripts/src/main.js -o app/scripts/dist/main.js",
+    "watch": "watchify -v -d app/scripts/src/main.js -o app/scripts/dist/main.js",
+    "wscat": "wscat -c http://localhost:3001"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env"
+          ],
+          "sourceMap": true
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "crypto-js": "^3.1.9-1",
+    "jquery": "^3.2.1",
+    "moment": "^2.19.1",
+    "nodemon": "^1.12.1",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "mime": "^2.0.3",
+    "ws": "^3.2.0"
+  }
+}
